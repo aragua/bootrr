@@ -1,11 +1,11 @@
 #!/bin/sh
 
-assert_driver_present cros-ec-debugfs-driver-present cros-ec-debugfs
-assert_device_present cros-ec-debugfs-probed cros-ec-debugfs cros-ec-debugfs.*
-assert_sysfs_attr_present cros-ec-debugfs-attr-ec /sys/kernel/debug/cros_ec
+# assert_driver_present cros-ec-debugfs-driver-present cros-ec-debugfs
+# assert_device_present cros-ec-debugfs-probed cros-ec-debugfs cros-ec-debugfs.*
+# assert_sysfs_attr_present cros-ec-debugfs-attr-ec /sys/kernel/debug/cros_ec
 
-assert_driver_present cros-ec-dev-driver-present cros-ec-dev
-assert_device_present cros-ec-dev-probed cros-ec-dev cros-ec-dev.*
+# assert_driver_present cros-ec-dev-driver-present cros-ec-dev
+# assert_device_present cros-ec-dev-probed cros-ec-dev cros-ec-dev.*
 
 assert_driver_present cros-ec-i2c-tunnel-driver-present cros-ec-i2c-tunnel
 assert_device_present cros-ec-i2c-tunnel-probed cros-ec-i2c-tunnel  ff200000.*
@@ -13,7 +13,7 @@ assert_device_present cros-ec-i2c-tunnel-probed cros-ec-i2c-tunnel  ff200000.*
 assert_driver_present cros-ec-keyb-driver-present cros-ec-keyb
 assert_device_present cros-ec-keyb-probed cros-ec-keyb ff200000.*
 
-assert_driver_present cros-ec-lightbar-driver-present cros-ec-lightbar
+# assert_driver_present cros-ec-lightbar-driver-present cros-ec-lightbar
 # assert_device_present cros-ec-lightbar-driver-present is expected to fail.
 
 assert_driver_present cros-ec-pwm-driver-present cros-ec-pwm
@@ -27,8 +27,8 @@ assert_device_present cros-ec-sensors-accel0-probed cros-ec-sensors cros-ec-acce
 assert_device_present cros-ec-sensors-accel1-probed cros-ec-sensors cros-ec-accel.1
 assert_device_present cros-ec-sensors-gyro0-probed cros-ec-sensors cros-ec-gyro.0
 
-assert_driver_present cros-ec-sysfs-driver-present cros-ec-sysfs
-assert_device_present cros-ec-sysfs-probed cros-ec-sysfs cros-ec-sysfs.*
+# assert_driver_present cros-ec-sysfs-driver-present cros-ec-sysfs
+# assert_device_present cros-ec-sysfs-probed cros-ec-sysfs cros-ec-sysfs.*
 assert_sysfs_attr_present cros-ec-sysfs-attr-flashinfo /sys/class/chromeos/cros_ec/flashinfo
 assert_sysfs_attr_present cros-ec-sysfs-attr-kb_wake_angle /sys/class/chromeos/cros_ec/kb_wake_angle
 assert_sysfs_attr_present cros-ec-sysfs-attr-veresion /sys/class/chromeos/cros_ec/version
