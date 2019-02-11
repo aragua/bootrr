@@ -1,5 +1,7 @@
 #!/bin/sh
 
+assert_file_is_empty deferred-probe-empty /sys/kernel/debug/devices_deferred
+
 # assert_driver_present cros-ec-debugfs-driver-present cros-ec-debugfs
 # assert_device_present cros-ec-debugfs-probed cros-ec-debugfs cros-ec-debugfs.*
 # assert_sysfs_attr_present cros-ec-debugfs-attr-ec /sys/kernel/debug/cros_ec

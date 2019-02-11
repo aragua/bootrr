@@ -1,5 +1,7 @@
 #!/bin/sh
 
+assert_file_is_empty deferred-probe-empty /sys/kernel/debug/devices_deferred
+
 assert_driver_present cros-ec-i2c-tunnel-driver-present cros-ec-i2c-tunnel
 assert_device_present cros-ec-i2c-tunnel-probed cros-ec-i2c-tunnel 12d40000.*
 
