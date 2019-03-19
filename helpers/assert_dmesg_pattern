@@ -1,0 +1,18 @@
+#!/bin/sh
+
+TEST_CASE_ID="dmesg-no-$1"
+if [ -z "$2" ]
+then
+	TEST_PATTERN="$1"
+else
+	TEST_PATTERN="$2"
+fi
+
+if $(dmesg | grep -qi "${TEST_PATTERN}")
+then
+	lava-test-case ${TEST_CASE_ID} --result fail
+else
+	lava-test-case ${TEST_CASE_ID} --result pass
+fi
+
+exit 0

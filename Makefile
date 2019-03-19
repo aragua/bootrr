@@ -6,6 +6,7 @@ all-install :=
 
 HELPERS := assert_file_is_empty \
            assert_device_present \
+           assert_dmesg_pattern \
            assert_driver_present \
 	   assert_mmc_present \
 	   assert_partition_found \
