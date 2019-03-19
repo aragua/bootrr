@@ -2,3 +2,10 @@
 
 assert_file_is_empty deferred-probe-empty /sys/kernel/debug/devices_deferred
 
+assert_dmesg_pattern error
+
+assert_dmesg_pattern fail
+
+assert_dmesg_pattern warn
+
+assert_dmesg_pattern bug '\-\[ cut here \]\-'
